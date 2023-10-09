@@ -1,0 +1,31 @@
+body {
+    background-image: url(assets/img/bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Mengunci gambar latar belakang agar tetap saat menggulir halaman */
+}
+
+body::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.3); /* Warna hitam dengan tingkat transparansi 0.5 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+/* Mengatur margin antara tombol */
+.btn-horizontal {
+    margin-bottom: 10px; /* Jarak vertikal antara tombol */
+    margin-right: 0; /* Tidak ada jarak horizontal antara tombol */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animasi pergantian warna latar belakang dan perubahan ukuran saat hover */
+}
+
+/* Efek hover dengan animasi */
+.btn-horizontal:hover {
+    background-color: white; /* Warna latar belakang saat dihover */
+    color: #007bff; /* Warna teks saat dihover */
+}
